@@ -1,9 +1,12 @@
-module.exports = {
+const homedir = require('os').homedir()
+const path = require('path')
+
+module.exports = env => ({
   entry: [
     './src/index.js',
   ],
   output: {
-    path: __dirname,
+    path: env === 'dev' ? path.resolve(`${homedir}/Library/Containers/com.luckymarmot.Paw/Data/Library/Application Support/com.luckymarmot.Paw/Extensions/io.csilk.PawExtensions.APIBlueprintGenerator`) : __dirname,
     filename: 'APIBlueprintGenerator.js',
   },
   module: {
@@ -20,4 +23,4 @@ module.exports = {
       },
     ],
   },
-}
+})

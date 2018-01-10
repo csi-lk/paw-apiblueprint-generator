@@ -1,9 +1,11 @@
+import { version } from '../package.json'
+
 const APIBlueprintGenerator = function generator() {
   this.response = function (exchange) {
     if (!exchange) {
       return null
     }
-
+    
     const headers = []
     let is_json = false
     for (const key in exchange.responseHeaders) {
@@ -120,7 +122,8 @@ const APIBlueprintGenerator = function generator() {
 }
 
 APIBlueprintGenerator.identifier = 'io.csilk.PawExtensions.APIBlueprintGenerator'
-APIBlueprintGenerator.title = 'API Blueprint Generator'
+APIBlueprintGenerator.title = 'CSILK API Blueprint Generator'
 APIBlueprintGenerator.fileExtension = 'apib'
+APIBlueprintGenerator.version = version
 
 registerCodeGenerator(APIBlueprintGenerator)

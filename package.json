@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "build:dev": "webpack --env=dev",
+    "watch": "nodemon -w src -e js -x \"npm run build:dev\"",
     "lint": "eslint src/**/*.js"
   },
   "repository": {
