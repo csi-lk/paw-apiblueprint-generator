@@ -1,4 +1,11 @@
 module.exports = {
+  entry: [
+    './src/index.js',
+  ],
+  output: {
+    path: __dirname,
+    filename: 'APIBlueprintGenerator.js',
+  },
   module: {
     rules: [
       {
@@ -7,7 +14,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ['babel-preset-env'],
           },
         },
       },
