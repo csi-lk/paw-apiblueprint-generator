@@ -1,0 +1,25 @@
+{
+  "name": "paw-apiblueprint-generator",
+  "version": "1.0.0",
+  "description": "A better API Blueprint Generator for Paw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csi-lk/paw-apiblueprint-generator.git"
+  },
+  "keywords": [
+    "api",
+    "blueprint",
+    "generator",
+    "paw"
+  ],
+  "author": "Callum Silcock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csi-lk/paw-apiblueprint-generator/issues"
+  },
+  "homepage": "https://github.com/csi-lk/paw-apiblueprint-generator#readme"
+}
