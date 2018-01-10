@@ -29,6 +29,9 @@
     },
     "env": {
       "browser": true
+    },
+    "globals": {
+      "registerCodeGenerator": true
     }
   }
   
