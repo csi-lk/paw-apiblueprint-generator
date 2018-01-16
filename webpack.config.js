@@ -17,7 +17,16 @@ module.exports = env => ({
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env', 'stage-3'],
+            presets: [['babel-preset-env', {
+              targets: {
+                ie: '10',
+              },
+            }]],
+            plugins: [
+              'transform-es2015-destructuring',
+              'transform-es2015-parameters',
+              'transform-object-rest-spread',
+            ],
           },
         },
       },

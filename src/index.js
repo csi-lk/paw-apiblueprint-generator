@@ -1,7 +1,7 @@
 import { version } from '../package.json'
 import path from './lib/path'
 
-const APIBlueprintGenerator = () => {
+const APIBlueprintGenerator = function APIBlueprintGenerator() {
   this.generate = (context, requests, options) => {
     const groups = context.getAllGroups()
     const output = {
