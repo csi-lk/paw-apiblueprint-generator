@@ -37,7 +37,38 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
+    "jest": "^22.1.1",
+    "jest-junit": "^3.4.1",
     "nodemon": "^1.14.10",
     "webpack": "^3.10.0"
+  },
+  "jest": {
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/**/*.{js}",
+      "!src/lib/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testResultsProcessor": "./node_modules/jest-junit"
+  },
+  "jest-junit": {
+    "suiteName": "mmgp-user-feedback tests",
+    "output": "./coverage/junit.xml"
   }
 }
